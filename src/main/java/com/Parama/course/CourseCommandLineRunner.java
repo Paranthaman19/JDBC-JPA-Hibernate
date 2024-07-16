@@ -36,8 +36,13 @@ public class CourseCommandLineRunner implements CommandLineRunner{
 		
 		repository.save(new Course(1,"Agriculture","Sugripan"));
 		repository.save(new Course(2,"Enterpreneur","Pary"));
+		repository.save(new Course(3,"Economy","Jana"));
+		repository.save(new Course(3,"Maths","Ashok"));
+		System.out.println(repository.findAll());
 		repository.deleteById(2l);//this deleteById is an inbuilt method used by springdatajpa
+		System.out.println(repository.count());
 		System.out.println(repository.findById(1l));//this findById is an inbuilt method used by springdatajpa
-          
+		System.out.println(repository.findByAuthor("Jana"));
+		System.out.println(repository.findByName("Maths"));
 }
 }
