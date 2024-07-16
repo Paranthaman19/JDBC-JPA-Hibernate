@@ -1,6 +1,11 @@
 package com.Parama.course;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Course {
+	@Id
      public long id;
      public String name;
      public String author;
